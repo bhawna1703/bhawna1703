@@ -1,0 +1,55 @@
+// Ask roll no from your user and print their marks
+
+import java.util.Scanner;
+public class arrays {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int[] roll_no=new int[7];
+        roll_no[0]=1;
+        roll_no[1]=2;
+        roll_no[2]=3;
+        roll_no[3]=4;
+        roll_no[4]=5;
+        roll_no[5]=6;
+        roll_no[6]=7;
+     String[] name=new String[7];
+      name[0]="bhawna";
+      name[1]="shubh";
+      name[2]="riya";
+      name[3]="priya";
+      name[4]="diya";
+      name[5]="sachin";
+      name[6]="prachi";
+      float[] marks=new float[7];
+      marks[0]=85;
+      marks[1]=78;
+      marks[2]=88;
+      marks[3]=75;
+      marks[4]=92;
+      marks[5]=74;
+      marks[6]=77;
+        System.out.println("enter your roll no:");
+
+    int roll=sc.nextInt();
+    for(int i=0;i<=6;i++){
+        if(roll==roll_no[i]){
+            System.out.println(roll_no[i]+" "+name[i]+" "+marks[i]);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+
