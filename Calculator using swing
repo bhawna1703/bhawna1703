@@ -1,0 +1,103 @@
+//Calculator using swing class
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.event.ActionListener;
+
+public class stringss {
+  static JFrame jf = new JFrame();
+
+
+    public static void main(String[] args) {
+
+
+       jf.setVisible(true);
+       jf.setSize(400, 500);
+
+       JTextField jt1 = new JTextField();
+       JLabel jl1 = new JLabel("enter num1");
+       jl1.setBounds(100, 100, 100, 25);
+       jt1.setBounds(200, 100, 100, 25);
+       jt1.setText("");
+
+       JTextField jt2 = new JTextField();
+       JLabel jl2 = new JLabel("enter num2");
+       jl2.setBounds(100, 150, 100, 25);
+       jt2.setBounds(200, 150, 100, 25);
+       jt2.setText("");
+
+       JLabel res = new JLabel();
+       res.setBounds(200, 240, 150, 25);
+       res.setFont(new Font("arial",Font.BOLD,25));
+
+
+
+       JButton but = new JButton("add");
+       but.setBounds(100, 200, 100, 25);
+
+       JButton but1=new JButton("sub");
+       but1.setBounds(200,200,100,25);
+
+        JButton but2=new JButton("mul");
+        but2.setBounds(300,200,100,25);
+
+
+        JButton but3=new JButton("div");
+        but3.setBounds(400,200,100,25);
+
+       but.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               int num1=Integer.parseInt(jt1.getText());
+               int num2=Integer.parseInt(jt2.getText());
+               int sum=num1+num2;
+               res.setText("sum is"+sum);
+
+
+           }
+       });
+         but1.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 int num1=Integer.parseInt(jt1.getText());
+                 int num2=Integer.parseInt(jt2.getText());
+                 int sub=num1-num2;
+                 res.setText("sub is"+sub);
+             }
+         });
+
+        but2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int num1=Integer.parseInt(jt1.getText());
+                int num2=Integer.parseInt(jt2.getText());
+                int mul=num1*num2;
+                res.setText("mul is"+mul);
+            }
+        });
+
+        but3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int num1=Integer.parseInt(jt1.getText());
+                int num2=Integer.parseInt(jt2.getText());
+                int div=num1/num2;
+                res.setText("div is"+div);
+            }
+        });
+
+
+       jf.add(jl1);
+       jf.add(jt1);
+       jf.add(jl2);
+       jf.add(jt2);
+       jf.add(but);
+       jf.add(but1);
+       jf.add(but2);
+       jf.add(but3);
+       jf.add(res);
+        jf.setLayout(null);
+
+
+        }
+    }
